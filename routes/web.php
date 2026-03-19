@@ -6,6 +6,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/aprendices', function () {
-    return view ('aprendices'); 
-});
+Route::get('/productos', [App\Http\Controllers\ProductController::class, 'index'])->name('products.index');
